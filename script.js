@@ -230,7 +230,6 @@ var data = [
     }
   }
 ]
-
 var mainDiv = document.getElementById("main");
 var popupMain = document.getElementById("popupMain");
 var popup = document.getElementById("popup");
@@ -249,8 +248,8 @@ for (var i = 0; i < data.length; i++) {
 
 function events(e) {
   popupChild = document.createElement("div");
-  popup.appendChild(popupChild);
   popupChild.id = "childGet";
+  popup.appendChild(popupChild);
   var childGet = document.getElementById("childGet");
   var childDivs = document.getElementById(e.target.id);
   var names = childDivs.innerText;
@@ -261,23 +260,23 @@ function events(e) {
           for (var key1 in data[j][key]) {
             if (typeof data[j][key][key1] == 'object') {
               for (var key2 in data[j][key][key1]) {
-                dataAssign(key2, data[j][key][key1][key2]);
+                dataAssign(childGet,key2, data[j][key][key1][key2]);
               }
             }
             else {
-              dataAssign(key1, data[j][key][key1]);
+              dataAssign(childGet,key1, data[j][key][key1]);
             }
           }
         }
         else {
-          dataAssign(key, data[j][key]);
+          dataAssign(childGet,key, data[j][key]);
         }
       }
     }
   }
   popups("block");
 }
-function dataAssign(keys, value) {
+function dataAssign(childGet,keys, value) {
   var h1 = document.createElement("h1");
   var hr = document.createElement("hr");
   h1.innerText = keys + "\t__\t" + value;
