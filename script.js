@@ -231,29 +231,6 @@ var data = [
   }
 ]
 
-// for (var key in data){
-//     for (var key1 in data[key]){
-//         if (typeof data[key][key1] =='object'){
-//             for(var key2 in data[key][key1] ){
-//                 if(typeof data[key][key1][key2] == 'object'){
-//                     for(var key3 in  data[key][key1][key2]){
-//                         console.log(key3 + ":" + data[key][key1][key2][key3])
-
-//                     }
-//                 }
-//                 else{
-//                 console.log(key2 + ":" + data[key][key1][key2]);
-
-//         }
-//             }
-//         }
-//         else{
-//             console.log(key1 + ":" + data[key][key1])
-//         }
-//     }
-//     console.log("-----------------------------")
-// }
-
 var mainDiv = document.getElementById("main");
 var popupMain = document.getElementById("popupMain");
 var popup = document.getElementById("popup");
